@@ -2,8 +2,8 @@ const express = require('express')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
 
-const apiRoutes = require('./routes/apiRoutes')
-const indexRoutes = require('./routes/indexRoutes')
+// const apiRoutes = require('./routes/apiRoutes')
+// const indexRoutes = require('./routes/indexRoutes')
 const app = express()
 const PORT = process.env.PORT || 4000
 
