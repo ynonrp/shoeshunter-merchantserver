@@ -7,9 +7,9 @@ const indexRoutes = require('./routes/indexRoutes')
 const app = express()
 const PORT = process.env.PORT || 4000
 
-// app.use(logger('dev'))
-// app.use(bodyParser.json())
+app.use(logger('dev'))
+app.use(bodyParser.json())
 
-app.use('/test' , indexRoutes)
+app.use('/' , indexRoutes)
 // app.get('/', (req, res) => res.send('<h2> Hello World! </h2>'));
 app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
