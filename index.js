@@ -16,3 +16,5 @@ app.use('/api', apiRoutes);
 app.use('/api-prod', apiRoutesProd);
 // app.get('/', (req, res) => res.send('<h2> Hello World! </h2>'));
 app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
+
+module.exports = app
