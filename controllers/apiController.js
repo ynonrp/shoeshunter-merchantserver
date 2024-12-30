@@ -27,29 +27,29 @@ exports.doCharge = function(req, res, next) {
 
 }
 
-exports.doChargeProd = function(req, res, next) {
-  var reqBody = req.body;
-  // res.send(reqBody);
-  // console.log('Charging request', reqBody);
-  // console.log("huba");
+// exports.doChargeProd = function(req, res, next) {
+//   var reqBody = req.body;
+//   // res.send(reqBody);
+//   // console.log('Charging request', reqBody);
+//   // console.log("huba");
 
-  var chargeToken = 'Basic ' + new Buffer('SB-Mid-server-J-YaPAwjbhAPnNFJp-sBkl7H').toString('base64');
-  var url = 'https://app.midtrans.com/snap/v1/transactions';
+//   var chargeToken = 'Basic ' + new Buffer('SB-Mid-server-J-YaPAwjbhAPnNFJp-sBkl7H').toString('base64');
+//   var url = 'https://app.midtrans.com/snap/v1/transactions';
 
-  request.post({
-    url: url,
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Authorization': chargeToken
-    },
-    body: JSON.stringify(reqBody)
-  }, function(err, response, body) {
-    var respObj = parseJson(body);
-    res.json(respObj);
-  });
+//   request.post({
+//     url: url,
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Accept': 'application/json',
+//       'Authorization': chargeToken
+//     },
+//     body: JSON.stringify(reqBody)
+//   }, function(err, response, body) {
+//     var respObj = parseJson(body);
+//     res.json(respObj);
+//   });
 
-}
+// }
 
 exports.checkauth = function(req,res) {
   var token = req.headers['x-auth'];
